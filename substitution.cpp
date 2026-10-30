@@ -67,8 +67,8 @@ int main(int argc, char** argv) {
         for(size_t i=0;i<input.length();i++)
         {
             //checks if character is alphabetical letter not symbols
-            if(islower(input[i])||isupper(input[i]))
-            {
+            //if(islower(input[i])||isupper(input[i]))
+            //{
                 //get index of key collarlated to input character
                 int index = -1;
                 for(int j=0;j<26;j++)
@@ -86,7 +86,7 @@ int main(int argc, char** argv) {
                     //decrypt uppercase
                     if(isupper(input[i])) input[i] = char('A' + index);
                 }
-            }
+            //}
         }
     }
     cout << input << endl;
