@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
   string input = "";
   while (getline(cin, input))
   {
-    if(strcmp(argv[1],"-e"))
+    if(strcmp(argv[1],"-e")==0)
     {
         //size_t for unsigned int
         for(size_t i = 0;i<input.length();i++)
@@ -62,13 +62,13 @@ int main(int argc, char** argv) {
             }
         }
     }
-    else if(strcmp(argv[1],"-d"))
+    else if(strcmp(argv[1],"-d")==0)
     {
         for(size_t i=0;i<input.length();i++)
         {
             //checks if character is alphabetical letter not symbols
-            //if(islower(input[i])||isupper(input[i]))
-            //{
+            if(islower(input[i])||isupper(input[i]))
+            {
                 //get index of key collarlated to input character
                 int index;
                 for(int j=0;j<26;j++)
@@ -79,14 +79,14 @@ int main(int argc, char** argv) {
                         break;
                     }
                 }
-                //if(index!=-1)
-                //{
+                if(index!=-1)
+                {
                     //decrypt lowercase
                     if(islower(input[i])) input[i] = char('a' + index);
                     //decrypt uppercase
                     if(isupper(input[i])) input[i] = char('A' + index);
-                //}
-            //}
+                }
+            }
         }
     }
     cout << input << endl;
