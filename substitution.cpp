@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
             //if(islower(input[i])||isupper(input[i]))
             //{
                 //get index of key collarlated to input character
-                int index = -1;
+                int index;
                 for(int j=0;j<26;j++)
                 {
                     if(toupper(key[j])==toupper(input[i]))
@@ -79,13 +79,13 @@ int main(int argc, char** argv) {
                         break;
                     }
                 }
-                if(index!=-1)
-                {
+                //if(index!=-1)
+                //{
                     //decrypt lowercase
                     if(islower(input[i])) input[i] = char('a' + index);
                     //decrypt uppercase
                     if(isupper(input[i])) input[i] = char('A' + index);
-                }
+                //}
             //}
         }
     }
