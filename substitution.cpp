@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
             //{
                 //get index of key collarlated to input character
                 int index = -1;
-                for(size_t j=0;j<input.length();j++)
+                for(int j=0;j<26;j++)
                 {
                     if(toupper(key[j])==toupper(input[i]))
                     {
